@@ -25,5 +25,16 @@ extension Bundle {
         }
 
         return loaded
+//        if let url = Bundle.main.url(forResource: file, withExtension: "json") {
+//              do {
+//                  let data = try Data(contentsOf: url)
+//                  let decoder = JSONDecoder()
+//                  let jsonData = try decoder.decode(T.self, from: data)
+//                  return jsonData
+//              } catch {
+//                  print("error:\(error)")
+//              }
+//          }
+//          return nil
     }
 }
