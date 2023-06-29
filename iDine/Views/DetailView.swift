@@ -9,13 +9,15 @@ import SwiftUI
 
 struct DetailView: View {
     
+  @Environment (\.dismiss) var dismiss
+    
    var item : MenuItem? = nil
-
+    
     var body: some View {
         NavigationStack{
             
             VStack{
-
+                
                 ZStack(alignment: .bottomTrailing){
                  
                     Image(item?.mainImage ?? "" )
@@ -29,6 +31,7 @@ struct DetailView: View {
                         .offset(x: -5, y: -5)
                 }
                 Text(item?.description ?? "")
+                    .padding(3)
                 Spacer()
                 
             }

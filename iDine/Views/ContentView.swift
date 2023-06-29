@@ -10,9 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     let menu = Bundle.main.decode([MenuSection].self, from: "menu.json")
-    
-    @State private var selection: String? = nil
-    
+    @State var isPresent :Bool = false
     var body: some View {
         VStack {
             /*Image(systemName: "globe")
@@ -27,9 +25,11 @@ struct ContentView: View {
                                 NavigationLink(destination: DetailView(item: item)) {
                                     Text(item.name)
                                    }
-                                      
+                                   
                             }
+
                         }
+                    
                     }
                 }
                 .navigationTitle("Menu")
@@ -38,12 +38,11 @@ struct ContentView: View {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button("Back"){
                             print("Hello")
+                            isPresent.toggle()
                         }
-                    
                     }
                 }
                 .listStyle(.grouped)
-                
             }
         }
         .padding()
