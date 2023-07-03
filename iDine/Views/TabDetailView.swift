@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct TabDetailView: View {
     @State var selectedView = 1
     
@@ -34,6 +35,7 @@ struct TabDetailView: View {
     }
 }
 
+@available(iOS 16.2, *)
 struct TabDetailView_Previews: PreviewProvider {
     static var previews: some View {
         TabDetailView()
